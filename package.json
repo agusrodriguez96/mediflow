@@ -1,0 +1,30 @@
+{
+  "name": "mediflow",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de turnos médicos desarrollado con Node.js, PostgreSQL y JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agusrodriguez96/mediflow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agusrodriguez96/mediflow/issues"
+  },
+  "homepage": "https://github.com/agusrodriguez96/mediflow#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
