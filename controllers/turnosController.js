@@ -4,24 +4,32 @@ const getTurnos = async (req, res) => {
 
     try {
 
-        const result = await pool.query(`
-            SELECT
+        const id_usuario = req.usuario.id;
+
+        const result = await pool.query(
+
+            `SELECT
                 t.id,
-                u.nombre AS paciente,
                 m.nombre AS medico,
                 e.nombre AS especialidad,
                 t.fecha,
                 t.hora,
                 t.estado
             FROM turnos t
-            JOIN usuarios u
-                ON t.id_usuario = u.id
+
             JOIN medicos m
                 ON t.id_medico = m.id
+
             JOIN especialidades e
                 ON m.id_especialidad = e.id
-            ORDER BY t.fecha, t.hora
-        `);
+
+            WHERE t.id_usuario = $1
+            AND t.estado <> 'cancelado'
+            
+            ORDER BY t.fecha, t.hora`,
+
+            [id_usuario]
+        );
 
         res.json(result.rows);
 

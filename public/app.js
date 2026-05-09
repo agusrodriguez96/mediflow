@@ -2,7 +2,26 @@ const API_URL = 'http://localhost:3000/api';
 
 const token = localStorage.getItem('token');
 
+const mostrarToast = (
+    mensaje,
+    tipo = 'success'
+) => {
 
+    const toast = document.getElementById('toast');
+
+    toast.textContent = mensaje;
+
+    toast.className = '';
+
+    toast.classList.add('show');
+    toast.classList.add(tipo);
+
+    setTimeout(() => {
+
+        toast.classList.remove('show');
+
+    }, 3000);
+};
 
 // PROTEGER DASHBOARD
 
@@ -147,7 +166,7 @@ document
 
         const data = await response.json();
 
-        alert(data.message || data.error);
+        mostrarToast(data.message || data.error);
 
         cargarTurnos();
     });
@@ -171,7 +190,7 @@ const cancelarTurno = async (id) => {
 
     const data = await response.json();
 
-    alert(data.message || data.error);
+    mostrarToast(data.message || data.error);
 
     cargarTurnos();
 };

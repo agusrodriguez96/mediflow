@@ -14,6 +14,7 @@ const register = async (req, res) => {
         );
 
         if (existe.rows.length > 0) {
+
             return res.status(400).json({
                 error: 'El email ya existe'
             });
@@ -25,11 +26,36 @@ const register = async (req, res) => {
             `INSERT INTO usuarios
             (nombre, email, password_hash)
             VALUES ($1, $2, $3)
-            RETURNING id, nombre, email`,
+            RETURNING id, nombre, email, rol`,
             [nombre, email, hash]
         );
 
-        res.status(201).json(result.rows[0]);
+        const usuario = result.rows[0];
+
+        const token = jwt.sign(     //genera token para ingresar automaticamente sin tener q volver al login
+            {
+                id: usuario.id,
+                email: usuario.email,
+                rol: usuario.rol
+            },
+            process.env.JWT_SECRET,
+            {
+                expiresIn: '2h'
+            }
+        );
+
+
+
+        // RESPUESTA
+
+        res.status(201).json({
+
+            message: 'Usuario registrado correctamente',
+
+            token,
+
+            usuario
+        });
 
     } catch (error) {
 

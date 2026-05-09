@@ -1,6 +1,26 @@
 const API_URL = 'http://localhost:3000/api';
 
 
+const mostrarToast = (
+    mensaje,
+    tipo = 'success'
+) => {
+
+    const toast = document.getElementById('toast');
+
+    toast.textContent = mensaje;
+
+    toast.className = '';
+
+    toast.classList.add('show');
+    toast.classList.add(tipo);
+
+    setTimeout(() => {
+
+        toast.classList.remove('show');
+
+    }, 3000);
+};
 
 // register formulario
 
@@ -39,15 +59,20 @@ if (registerForm) {
 
             const data = await response.json();
 
-            alert(data.message);
+            mostrarToast(data.message);
 
-            window.location.href = 'login.html';
+            localStorage.setItem(
+                'token',
+                data.token
+            );
+
+            window.location.href = 'index.html';
 
         } catch (error) {
 
             console.error(error);
 
-            alert('Error al registrar');
+           mostrarToast('Error al registrar');
         }
     });
 }
@@ -99,14 +124,14 @@ if (loginForm) {
 
             } else {
 
-                alert(data.error);
+                mostrarToast(data.error);
             }
 
         } catch (error) {
 
             console.error(error);
 
-            alert('Error al iniciar sesión');
+            mostrarToast('Error al iniciar sesión');
         }
     });
 }

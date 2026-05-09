@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mediflow</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -15,18 +15,14 @@
 
         <h1>Mediflow</h1>
 
-        <button id="logoutBtn">
-            Cerrar sesión
-        </button>
-
         <hr>
 
         <h2>Reservar turno</h2>
 
         <form id="turnoForm">
 
-            <select id="medicoSelect">
-
+            <select id="medicoSelect" required>
+                <option value=""disabled selected hidden>Seleccione un médico</option>
             </select>
 
             <input
@@ -45,6 +41,10 @@
                 Reservar
             </button>
 
+            <button id="logoutBtn">
+            Cerrar sesión
+            </button>
+
         </form>
 
         <hr>
@@ -56,8 +56,8 @@
         </div>
 
     </div>
-
+    
     <script src="app.js"></script>
-
+    <div id="toast"></div>
 </body>
 </html>
