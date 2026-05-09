@@ -1,6 +1,6 @@
 :root {
 
-    /* ===== COLORES ===== */
+    /* colores */
 
     --color-primary: #1e88e5;
     --color-primary-dark: #1565c0;
@@ -19,26 +19,26 @@
 
     --color-border: #dbe7ee;
 
-    /* ===== SOMBRAS ===== */
+    /* sombras */
 
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
 
     --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.08);
 
-    /* ===== RADIOS ===== */
+    /* radius */
 
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
 
-    /* ===== TRANSICIONES ===== */
+    /* trans */
 
     --transition: all 0.3s ease;
 }
 
 
 
-/* ===== RESET ===== */
+/* reset */
 
 * {
 
@@ -50,7 +50,7 @@
 
 
 
-/* ===== BODY ===== */
+/* body */
 
 body {
 
@@ -75,12 +75,12 @@ body {
 
 
 
-/* ===== CONTENEDOR PRINCIPAL ===== */
+/* container ppal */
 
 .container {
 
     width: 100%;
-    max-width: 700px;
+    max-width: 500px;
 
     background-color: var(--color-surface);
 
@@ -93,7 +93,7 @@ body {
 
 
 
-/* ===== TITULOS ===== */
+/* titulos */
 
 h1 {
 
@@ -126,7 +126,7 @@ h3 {
 
 
 
-/* ===== FORMULARIOS ===== */
+/* forms */
 
 form {
 
@@ -140,7 +140,7 @@ form {
 
 
 
-/* ===== INPUTS ===== */
+/* inputs */
 
 input,
 select {
@@ -172,7 +172,7 @@ select:focus {
 
 
 
-/* ===== BOTONES ===== */
+/* botones */
 
 button {
 
@@ -203,7 +203,7 @@ button:hover {
 
 
 
-/* ===== BOTON LOGOUT ===== */
+/* boton cerrar sesion */
 
 #logoutBtn {
 
@@ -219,7 +219,7 @@ button:hover {
 
 
 
-/* ===== LINKS ===== */
+/* links */
 
 a {
 
@@ -239,7 +239,7 @@ a:hover {
 
 
 
-/* ===== TEXTOS ===== */
+/* textos */
 
 p {
 
@@ -252,7 +252,7 @@ p {
 
 
 
-/* ===== TURNOS ===== */
+/* turnos */
 
 .turno {
 
@@ -282,7 +282,7 @@ p {
 
 
 
-/* ===== ESTADOS ===== */
+/* estados */
 
 .turno p {
 
@@ -291,7 +291,7 @@ p {
 
 
 
-/* ===== HR ===== */
+/* hr */
 
 hr {
 
@@ -306,7 +306,7 @@ hr {
 
 
 
-/* ===== SCROLL SUAVE ===== */
+/* scroll suave */
 
 html {
 
@@ -315,7 +315,7 @@ html {
 
 
 
-/* ===== RESPONSIVE ===== */
+/* responsive */
 
 @media (max-width: 768px) {
 
@@ -377,7 +377,7 @@ html {
     }
 }
 
-/* ===== TOAST ===== */
+/* toast  */
 
 #toast {
 
@@ -411,7 +411,7 @@ html {
 
 
 
-/* TOAST VISIBLE */
+/* toast visible */
 
 #toast.show {
 
@@ -422,7 +422,7 @@ html {
 
 
 
-/* ERROR */
+/* error */
 
 #toast.error {
 
@@ -431,9 +431,23 @@ html {
 
 
 
-/* SUCCESS */
+/* exito */
 
 #toast.success {
 
     background-color: #43a047;
+}
+
+
+.logo {
+
+
+    max-height: 250px;
+
+    width: auto;
+
+    display: block;
+
+    margin: 0 auto 15px auto;
+
 }
