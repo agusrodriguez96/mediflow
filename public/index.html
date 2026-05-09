@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediflow</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Mediflow</h1>
+
+        <button id="logoutBtn">
+            Cerrar sesión
+        </button>
+
+        <hr>
+
+        <h2>Reservar turno</h2>
+
+        <form id="turnoForm">
+
+            <select id="medicoSelect">
+
+            </select>
+
+            <input
+                type="date"
+                id="fecha"
+                required
+            >
+
+            <input
+                type="time"
+                id="hora"
+                required
+            >
+
+            <button type="submit">
+                Reservar
+            </button>
+
+        </form>
+
+        <hr>
+
+        <h2>Mis turnos</h2>
+
+        <div id="turnosContainer">
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
