@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Mediflow</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Registro</h1>
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Nombre"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Contraseña"
+                required
+            >
+
+            <button type="submit">
+                Registrarse
+            </button>
+
+        </form>
+
+        <p>
+            ¿Ya tenés cuenta?
+            <a href="login.html">
+                Iniciar sesión
+            </a>
+        </p>
+
+    </div>
+
+    <script src="auth.js"></script>
+
+</body>
+</html>

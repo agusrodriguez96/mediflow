@@ -1,7 +1,7 @@
 const pool = require('../db');
 
 
-// Obtener especialidades
+
 
 const getEspecialidades = async (req, res) => {
 
