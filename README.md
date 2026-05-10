@@ -87,6 +87,7 @@ Garantiza la integridad de los datos.
 
 ## 🚀 Tecnologías utilizadas
 
+- JavaScript Vanilla
 - Node.js
 - PostgreSQL
 - pgAdmin
